@@ -1,0 +1,1010 @@
+import datetime
+import random
+d=datetime.date.today()
+t=datetime.datetime.now()
+print("\n-----------------------------------------------------------------------------------------------------------------------------""\n   \t\t   WELCOME TO OFFICAL M.A.A.N.S TRAVELS PROGRAM""\n 1.THIS PROGRAM IS DEVELOPED BY [M]MONALI BANKHELE,[A]ANUPRAS DAVANE,[A]ADITYA GRIEESH,[N]NIDHI YADAV,[S]SHREYASH RAJPUT""\n 2.NOTE THIS PROGRAM IS VERY SENSITIVE!!SO PLEASE WRITE EVERYTHING WITH CORRECT SPELLING""\n 3.NOTE THIS PROGRAM CAN BOOK CURRENTLY 4 TICKETS AT TIME""\n 4.Ⓒ2021 m.a.a.n.sgroup ALL RIGHTS RESERVED""\n-----------------------------------------------------------------------------------------------------------------------------")
+print("\n\n\t    ************ WELCOME TO MAANS TRAVELS ************")
+print("""\n\nDESTINATONS(SELECT FROM GIVEN): \n KOLHAPUR \n PUNE \n NASHIK \n SOLAPUR \n RATNAGIRI \n SATARA \n THANE""" )
+fro=input("FROM:")
+to=input("TO:")
+fro=fro.upper() #to take start point of journey  from user
+to=to.upper()   #to take end point  of journey from user
+pflag=0
+flg=0
+flag=0
+#STARTING POINT 1
+if(fro=="THANE"):  
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. MAJIWADA \n 2. COURT NAKA \n 3. MARATHON CHAUK \n 4. VANDANA TALKIES \n 5. KALAWA NAKA""")
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp=="MAJIWADA" or bp=="COURT NAKA" or bp=="MARATHON CHAUK"or bp=="VANDANA TALKIES" or bp=="KALAWA NAKA"):
+        flg=0 #For further execution of program
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 2
+elif(fro=="KOLHAPUR"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. DSK TOYOTA SHOWROOM SHIROLI \n 2. SAKAL PRESS \n 3. TARARANI CHAUK \n 4. TAWADE HOTEL KOLHAPUR BYPASS \n 5. M.A.A.N.S BUS STOP KOLHAPUR""")  
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp=="DSK TOYOTA SHOWROOM SHIROLI" or bp=="SAKAL PRESS" or bp=="TARARANI CHAUK" or bp=="TAWADE HOTEL KOLHAPUR BYPASS" or bp=="M.A.A.N.S BUS STOP KOLHAPUR"):
+        flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 3
+elif(fro=="PUNE"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST:\n 1. WAKAD-POLICE CHOWKI OPP RAJYOG HOTEL \n 2. CHANDANI CHAUK \n 3. HINJEWADI BUS STOP-M.A.A.N.S TRAVELS""") 
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp==" WAKAD-POLICE CHOWKI OPP RAJYOG HOTEL" or bp=="CHANDANI CHAUK" or bp=="HINJEWADI M.A.A.N.S BUS STOP"):
+        flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 4
+elif(fro=="NASHIK"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. DWARKA CHAUK \n 2. BOMBAY NAKA-OPP HOTEL SANDEEP \n 3. NASHIK ROAD \n 4. M.A.A.N.S BUS STOP NASHIK""")
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp=="DWARKA CHAUK" or bp=="BOMBAY NAKA-OPP HOTEL SANDEEP" or bp=="NASHIK ROAD" or bp=="M.A.A.N.S BUS STOP NASHIK"):
+        flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 5
+elif(fro=="SOLAPUR"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. VINAYAK MALL/MECHANIC CHAUK \n 2. PATIL HOTEL SOLHAPUR BYPASS \n 3. SOLAPUR BUS STAND \n 4. M.A.A.N.S BUS STOP SOLAPUR""")
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp==" VINAYAK MALL" or bp=="PATIL HOTEL SOLAPUR BYPASS" or bp=="SOLAPUR BUS STAND" or bp=="M.A.A.N.S BUS STOP SOLAPUR"):
+        flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 6
+elif(fro=="RATNAGIRI"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. SAWARDE OPP ST STAND \n 2. ARAVALI BUS STOP \n 3. NIVALI FATA \n 4. MAHALAXMI MANDIR RATNAGIRI \n 5. M.A.A.N.S BUS STOP RATNAGIRI""")
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp=="SAWARDE OPP ST STAND" or bp=="ARAVALI BUS STOP"or bp=="NIVALI FATA" or bp=="MAHALAXMI MANDIR RATNAGIRI" or bp=="M.A.A.N.S BUS STOP RATNAGIRI"):
+        flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#STARTING POINT 7
+elif(fro=="SATARA"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1.BOMBAY HOTEL SATARA BYPASS \n 2. M.A.A.N.S BUS STOP SATARA""")
+    bp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    bp=bp.upper()
+    if(bp=="BOMBAY HOTEL SATARA BYPASS" or bp=="M.A.A.N.S BUS STOP SATARA"):
+          flg=0
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+else:
+    print("ERROR!!! INVALID DESTATION ") #IF THE SPELLING STARTING POINT IS WRONG OR INVALID STARTING POINT ENTERED
+    temp=0
+#DESTINATION 1
+if(to=="THANE"):
+    print("""ENTER YOUR DROPING POINT FROM GIVEN LIST: \n 1. MAJIWADA \n 2. COURT NAKA \n 3. MARATHON CHAUK \n 4. VANDANA TALKIES \n 5. KALAWA NAKA""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="MAJIWADA" or dp=="COURT NAKA" or dp=="MARATHON CHAUK"or dp=="VANDANA TALKIES" or dp=="KALAWA NAKA"):
+        flag=1 #For further execution of program
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#DESTINATION 2
+elif(to=="KOLHAPUR"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. DSK TOYOTA SHOWROOM SHIROLI \n 2. SAKAL PRESS \n 3. TARARANI CHAUK \n 4. TAWADE HOTEL KOLHAPUR BYPASS \n 5. M.A.A.N.S BUS STOP KOLHAPUR""") 
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="DSK TOYOTA SHOWROOM SHIROLI" or dp=="SAKAL PRESS" or dp=="TARARANI CHAUK" or dp=="TAWADE HOTEL KOLHAPUR BYPASS" or dp=="M.A.A.N.S BUS STOP KOLHAPUR"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#DESTINATION 3
+elif(to=="PUNE"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST:\n 1. WAKAD-POLICE CHOWKI OPP RAJYOG HOTEL \n 2. CHANDANI CHAUK \n 3. HINJEWADI BUS STOP-M.A.A.N.S TRAVELS""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp==" WAKAD-POLICE CHOWKI OPP RAJYOG HOTEL" or dp=="CHANDANI CHAUK" or dp=="HINJEWADI M.A.A.N.S BUS STOP"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#DESTINATION 4
+elif(to=="NASHIK"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. DWARKA CHAUK \n 2. BOMBAY NAKA-OPP HOTEL SANDEEP \n 3. NASHIK ROAD \n 4. M.A.A.N.S BUS STOP NASHIK""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="DWARKA CHAUK" or dp=="BOMBAY NAKA-OPP HOTEL SANDEEP" or dp=="NASHIK ROAD" or dp=="M.A.A.N.S BUS STOP NASHIK"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#DESTINATION 5
+elif(to=="SOLAPUR"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. VINAYAK MALL/MECHANIC CHAUK \n 2. PATIL HOTEL SOLHAPUR BYPASS \n 3. SOLAPUR BUS STAND \n 4. M.A.A.N.S BUS STOP SOLAPUR""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="VINAYAK MALL" or dp=="PATIL HOTEL SOLAPUR BYPASS" or dp=="SOLAPUR BUS STAND" or dp=="M.A.A.N.S BUS STOP SOLAPUR"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=0
+#DESTINATION 6    
+elif(to=="RATNAGIRI"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1. SAWARDE OPP ST STAND \n 2. ARAVALI BUS STOP \n 3. NIVALI FATA \n 4. MAHALAXMI MANDIR RATNAGIRI \n 5. M.A.A.N.S BUS STOP RATNAGIRI""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="SAWARDE OPP ST STAND" or dp=="ARAVALI BUS STOP"or dp=="NIVALI FATA" or dp=="MAHALAXMI MANDIR RATNAGIRI" or dp=="M.A.A.N.S BUS STOP RATNAGIRI"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF BOARDING POINT")
+        temp=2
+#DESTINATION 7
+elif(to=="SATARA"):
+    print("""ENTER YOUR BOARDING POINT FROM GIVEN LIST: \n 1.BOMBAY HOTEL SATARA BYPASS \n 2. M.A.A.N.S BUS STOP SATARA""")
+    dp=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+    dp=dp.upper()
+    if(dp=="BOMBAY HOTEL SATARA BYPASS" or dp=="M.A.A.N.S BUS STOP SATARA"):
+        flag=1
+    else:
+        print("ERROR! CHECK SPELLING OF DROPPING POINT")
+        temp=2
+else:
+    print("ERROR!!! INVALID DESTATION ")
+    temp=2
+if(flag==1 and flg==0):#if correct spellings entered in bp and dp
+    n=int(input("ENTER THE NUMBER OF TICKETS YOU WANT:"))
+    if(n==0):
+        print("THE VALUE OF NUMBER OF PEOPLE TRAVELLING CANNOT BE ZERO")
+        temp=0 #temp is acting same like flag
+    elif(n==1):
+        name=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender=input("ENTER YOUR GENDER:")
+        age=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name=name.upper()
+        gender=gender.upper()
+        temp=1
+    elif(n==2): 
+        name=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender=input("ENTER YOUR GENDER:")
+        age=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name1=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender1=input("ENTER YOUR GENDER:")
+        age1=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name=name.upper()
+        gender=gender.upper()
+        name1=name1.upper()
+        gender1=gender1.upper()
+        temp=1
+    elif(n==3):
+        name=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender=input("ENTER YOUR GENDER:")
+        age=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name1=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender1=input("ENTER YOUR GENDER:")
+        age1=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name2=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender2=input("ENTER YOUR GENDER:")
+        age2=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name=name.upper()
+        gender=gender.upper()
+        name1=name1.upper()
+        gender1=gender1.upper()
+        name2=name2.upper()
+        gender2=gender2.upper()
+        temp=1
+    elif(n==4):
+        name=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender=input("ENTER YOUR GENDER:")
+        age=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name1=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender1=input("ENTER YOUR GENDER:")
+        age1=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name2=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender2=input("ENTER YOUR GENDER:")
+        age2=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name3=input("ENTER YOUR NAME(IN [FIRST NAME MIDDLE NAME LAST NAME] FORMAT):")
+        gender3=input("ENTER YOUR GENDER:")
+        age3=int(input("ENTER YOUR AGE(ENTER IN DIGITS):"))
+        name=name.upper()
+        gender=gender.upper()
+        name1=name1.upper()
+        gender1=gender1.upper()
+        name2=name2.upper()
+        gender2=gender2.upper()
+        name3=name3.upper()
+        gender3=gender3.upper()
+        temp=1
+    else:
+        print("SORRY! CURRENTLY YOU CAN BOOK 4 TICKETS AT A TIME")
+        temp=0
+    day=int(input("ENTER DATE OF TRAVELLING IN DD FORMAT:"))
+    month=int(input("ENTER MONTH OF TRAVELLING IN MM FORMAT:"))
+    if(month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12):
+        year=int(input("ENTER YEAR OF TRAVELLING IN YYYY FORMAT:"))
+        if(day>0 and day<=31 and year>=2022):
+            temp=1
+        else:
+            temp=2
+    elif(month==2):
+        year=int(input("ENTER YEAR OF TRAVELLING IN YYYY FORMAT:"))
+        y=year%4
+        if(day>0 and day<=28 and year>=2022 and y!=0 ):
+            temp=1
+        elif(day>0 and day<=29 and year>=2022 and y==0):
+            temp=1
+        else:
+            temp=2
+    elif(month==9 or month==4 or month==6 or month==11):
+        year=int(input("ENTER YEAR OF TRAVELLING IN YYYY FORMAT:"))
+        if(day>0 and day<=30 and year>=2022):
+            temp=1
+        else:
+            temp=2
+    else:
+        temp=2
+    if(temp==1):
+        print("WHICH TYPE WOULD YOU PREFER:""\n1. SLEEPER""\n2. SEATER")
+        ty=input("ENTER YOUR CHOICE:(ENTER IN CHARACTERS):")
+        ty=ty.upper()
+        if(ty=="SLEEPER"):
+            print("SELECT BERTH YOU WANT:""\n1. UPPER ""\n2. LOWER ")
+            berth=input("ENTER YOUR CHOICE (ENTER IN CHARACTERS):")
+            berth=berth.upper()
+        else:
+            temp=2   
+        print("WHICH CATEGORY WOULD YOU PREFER:""\n1. AC""\n2. NON-AC")
+        cate=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+        cate=cate.upper()
+        print("""SELECT DEPARTURE TIME SLOT: \n1 9:30 AM \n2 3:30 PM \n3 9:30 PM""")#SELECTING FAVORABLE TIME SLOT FROM START POINT
+        time1=input("ENTER TIME:")
+        time1=time1.upper()
+        print("\n----------------------------------------------------------------------""\n \t\t\tM.A.A.N.S ASSURANCE POGRAM(T&C APPLY)" "\n Secure your trip just at ₹ 15 per passenger(Incl. GST) " "\nUpto ₹ 500 extra refund on ticket price if the bus is cancelled" "\nUpto ₹ 75,000in the event of accidental hospitalisation" "\nUpto ₹ 5Lakh in case of death/PTD/PPD)")
+        travi=input("YES,PROTECT MY TRIP AT ₹15 (PER PASSENGER),I AGREE TERMS & CONDITIONS" "\nNO,I WOULD LIKE TO PROCEED WITHOUT INSURANCE" "\nENTER YOUR CHOICE (YES OR NO):")
+        print("----------------------------------------------------------------------")
+        travi=travi.upper()
+        if(travi=="YES"):
+            travi_pay=n*15
+        else:
+            travi_pay=0
+        print("GET FLAT 10% OFF ON ONLINE PAYMENTS""\n ENTER MODE OF PAYMENT:""\n1. ONLINE""\n2. CASH")
+        pay=input("ENTER YOUR CHOICE(ENTER IN CHARACTERS):")
+        pay=pay.upper()
+        if(pay=="ONLINE"):
+              print("SELECT AN PAYMENT OPTION:")
+              print("1. CREDIT CARD""\n2. DEBIT CARD""\n3. G-PAY""\n4. PAYTM""\n5. NETBANKING""\n6. M.A.A.N.S WALLET")
+              opay=input("ENTER YOUR CHOICE(IN CHARACTERS):")
+              opay=opay.upper()
+              if(opay=="CREDIT CARD" or opay=="DEBIT CARD"):
+                  cardn=int(input("ENTER YOUR CARD NUMBER:"))
+                  if(cardn>=1111111111111111 and cardn<=9999999999999999):
+                      em=int(input("ENTER EXPIRY MONTH(IN DIGITS):"))
+                      if(em>=1 and em<=12):
+                          ey=int(input("ENTER EXPIRY YEAR(IN DIGITS):"))
+                          if(ey>21 and ey<=99):
+                              cvv=int(input("ENTER CVV:"))
+                              if(cvv>=1 and cvv<=999):
+                                  cardhname=input("ENTER CARDHOLDER NAME:")
+                                  cardhame=cardhanme.upper()
+                                  otp=int(input("ENTER 6 DIGIT OTP:"))
+                                  if(otp>1 and otp<=999999):
+                                      print("**********************************PAYMENT SUCCESSFUL**********************************")
+                                      pflag=1
+                                  else:
+                                      print("ERROR!WRONG OTP PAYMENT DECLINED")
+                                      temp=2
+                              else:
+                                  temp=2
+
+                          else:
+                              temp=2  
+                      else:
+                          temp=2
+                  else:
+                      temp=2
+              elif(opay=="G-PAY"):
+                  mpin=int(input("ENTER YOUR MPIN:"))
+                  if(mpin>=1 and mpin<=9999):
+                      print("**********************************PAYMENT SUCCESSFUL**********************************")
+                      pflag=1
+                  else:
+                      temp=2
+              elif(opay=="PAYTM"):
+                  print("SELECT PAYMENT OPTION:""\n 1. DEBIT/CREDIT CARD \n 2. PAYTM WALLET")
+                  ppay=input("ENTER YOUR CHOICE(IN CHARACTERS):")
+                  ppay=ppay.upper()
+                  if(ppay=="DEBIT CARD" or ppay=="CERDIT CARD"):
+                      otp=int(input("ENTER 6 DIGIT OTP:"))
+                      if(otp>1 and otp<=999999):
+                          print("**********************************PAYMENT SUCCESSFUL**********************************")
+                          pflag=1
+                      else:
+                          print("ERROR!WRONG OTP PAYMENT DECLINED")
+                          temp=2
+                  elif(ppay=="PAYTM WALLET"):
+                      otp=int(input("ENTER 6 DIGIT OTP:"))
+                      if(otp>1 and otp<=999999):
+                          print("**********************************PAYMENT SUCCESSFUL**********************************")
+                          pflag=1
+                      else:
+                          print("ERROR!WRONG OTP PAYMENT DECLINED")
+                          temp=2
+                  else:
+                      temp=2
+              elif(opay=="NETBANKING"):
+                  userid=int(input("ENTER YOUR USER ID(IN DIGITS):"))
+                  if(userid>1 and userid==999999999999):
+                      userpass=input("ENTER YOUR PASSWORD:")
+                      tranpass=input("ENTER YOUR PASSWORD:")
+                      otp=int(input("ENTER 6 DIGIT OTP:"))
+                      if(otp>1 and otp<=999999):
+                          print("**********************************PAYMENT SUCCESSFUL**********************************")
+                          pflag=1
+                      else:
+                          print("ERROR!WRONG OTP PAYMENT DECLINED")
+                          temp=2
+                  else:
+                      temp=2
+              elif(opay=="M.A.A.N.S WALLET"):
+                 mpin=int(input("ENTER YOUR MPIN:"))
+                 if(mpin>=1 and mpin<=9999):
+                     print("**********************************PAYMENT SUCCESSFUL**********************************")
+                     pflag=1
+                 else:
+                     temp=2
+              else:
+                  print("******************** ERROR NO SUCH PAYMENT OPTION ********************")
+                  temp=2
+        elif(pay=="CASH"):
+            print("\n*********************PLEASE PAY CASH WHEN TICKET IS BEING CHECK-IN*********************")
+            pflag=1
+        else:
+            print("*******ERROR!WRONG INPUT ********") 
+            temp=2
+        if(time1=="9:30AM" or time1=="3:30PM" or time1=="9:30PM" or time1=="9:30 AM"or time1=="3:30 PM" or time1=="9:30 PM"):
+            if(ty=="SEATER"):#TYPE 1
+                if(cate=="AC"): #category ac
+                    if(fro =="THANE" and to=="KOLHAPUR"):
+                        fare,dist,time=n*1200,380,8
+                    elif(fro=="THANE" and to=="PUNE"):
+                        fare,dist,time=n*760,150,3.3
+                    elif(fro=="THANE" and to=="NASHIK"):
+                        fare,dist,time=n*700,145,3
+                    elif(fro=="THANE" and to=="SOLAPUR"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="THANE" and to=="RATNAGIRI"):
+                        fare,dist,time=n*1800,450,10
+                    elif(fro=="THANE" and to=="SATARA"):
+                        fare,dist,time=n*950,260,6
+                    elif(fro=="KOLHAPUR" and to=="THANE"):
+                        fare,dist,time=n*1200,380,8
+                    elif(fro=="KOLHAPUR" and to=="PUNE"):
+                        fare,dist,time=n*600,230,4.2
+                    elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                        fare,dist,time=n*1800,450,9
+                    elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                        fare,dist,time=n*600,230,6
+                    elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                        fare,dist,time=n*500,135,3.3
+                    elif(fro=="KOLHAPUR" and to=="SATARA"):
+                        fare,dist,time=n*400,130,2
+                    elif(fro=="PUNE" and to=="THANE"):
+                        fare,dist,time=n*760,150,3.3
+                    elif(fro=="PUNE" and to=="KOLHAPUR"):
+                        fare,dist,time=n*600,230,4.2                   
+                    elif(fro=="PUNE" and to=="NASHIK"):
+                        fare,dist,time=n*550,210,4.3
+                    elif(fro=="PUNE" and to=="SOLAPUR"):
+                        fare,dist,time=n*600,230,5
+                    elif(fro=="PUNE" and to=="RATNAGIRI"):
+                        fare,dist,time=n*800,310,6.1
+                    elif(fro=="PUNE" and to=="SATARA"):
+                        fare,dist,time=n*400,120,2.2
+                    elif(fro=="NASHIK" and to=="THANE"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                        fare,dist,time=n*1800,450,9
+                    elif(fro=="NASHIK" and to=="PUNE"):
+                        fare,dist,time=n*550,210,4.3
+                    elif(fro=="NASHIK" and to=="SOLAPUR"):
+                        fare,dist,time=n*1800,420,9
+                    elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                        fare,dist,time=n*2000,520,11
+                    elif(fro=="NASHIK" and to=="SATARA"):
+                        fare,dist,time=n*900,330,7.3
+                    elif(fro=="SOLAPUR" and to=="THANE"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="SOLAPUR" and to=="KOLHAPUR"):
+                        fare,dist,time=n*600,230,6
+                    elif(fro=="SOLAPUR" and to=="PUNE"):
+                        fare,dist,time=n*600,230,5
+                    elif(fro=="SOLAPUR"and to=="NASHIK"):
+                        fare,dist,time=n*1800,420,9
+                    elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                        fare,dist,time=n*1000,360,9
+                    elif(fro=="SOLAPUR" and to=="SATARA"):
+                        fare,dist,time=n*800,260,6
+                    elif(fro=="RATNAGIRI" and to=="THANE"):
+                        fare,dist,time=n*1800,450,10
+                    elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                        fare,dist,time=n*300,135,3.3
+                    elif(fro=="RATNAGIRI" and to=="PUNE"):
+                        fare,dist,time=n*800,310,6.1
+                    elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                        fare,dist,time=n*2000,520,11
+                    elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                        fare,dist,time=n*1000,360,9
+                    elif(fro=="RATNAGIRI" and to=="SATARA"):
+                        fare,dist,time=n*800,200,4.2
+                    elif(fro=="SATARA" and to=="THANE"):
+                        fare,dist,time=n*950,260,6
+                    elif(fro=="SATARA" and to=="KOLHAPUR"):
+                        fare,dist,time=n*300,130,2
+                    elif(fro=="SATARA" and to=="PUNE"):
+                        fare,dist,time=n*300,120,2.2
+                    elif(fro=="SATARA" and to=="NASHIK"):
+                        fare,dist,time=n*900,330,7.3
+                    elif(fro=="SATARA" and to=="SOLAPUR"):
+                        fare,dist,time=n*800,260,6
+                    elif(fro=="SATARA" and to=="RATNAGIRI"):
+                        fare,dist,time=n*800,200,4.2
+                    else:
+                        print("*********** ERRORR *********")
+                elif(cate=="NON-AC"): #category non-ac
+                    if(fro =="THANE" and to=="KOLHAPUR"):
+                        fare,dist,time=n*1200,380,8
+                    elif(fro=="THANE" and to=="PUNE"):
+                        fare,dist,time=n*760,150,3.3
+                    elif(fro=="THANE" and to=="NASHIK"):
+                        fare,dist,time=n*700,145,3
+                    elif(fro=="THANE" and to=="SOLAPUR"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="THANE" and to=="RATNAGIRI"):
+                        fare,dist,time=n*1800,450,10
+                    elif(fro=="THANE" and to=="SATARA"):
+                        fare,dist,time=n*950,260,6
+                    elif(fro=="KOLHAPUR" and to=="THANE"):
+                        fare,dist,time=n*1200,380,8
+                    elif(fro=="KOLHAPUR" and to=="PUNE"):
+                        fare,dist,time=n*600,230,4.2
+                    elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                        fare,dist,time=n*1800,450,9
+                    elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                        fare,dist,time=n*600,230,6
+                    elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                        fare,dist,time=n*300,135,3.3
+                    elif(fro=="KOLHAPUR" and to=="SATARA"):
+                        fare,dist,time=n*300,130,2
+                    elif(fro=="PUNE" and to=="THANE"):
+                        fare,dist,time=n*760,150,3.3
+                    elif(fro=="PUNE" and to=="KOLHAPUR"):
+                        fare,dist,time=n*600,230,4.2
+                    elif(fro=="PUNE" and to=="NASHIK"):
+                        fare,dist,time=n*550,210,4.3
+                    elif(fro=="PUNE" and to=="SOLAPUR"):
+                        fare,dist,time=n*600,230,5
+                    elif(fro=="PUNE" and to=="RATNAGIRI"):
+                        fare,dist,time=n*800,310,6.1
+                    elif(fro=="PUNE" and to=="SATARA"):
+                        fare,dist,time=n*300,120,2.2
+                    elif(fro=="NASHIK" and to=="THANE"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                        fare,dist,time=n*1800,450,9
+                    elif(fro=="NASHIK" and to=="PUNE"):
+                        fare,dist,time=n*550,210,4.3
+                    elif(fro=="NASHIK" and to=="SOLAPUR"):
+                        fare,dist,time=n*1800,420,9
+                    elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                        fare,dist,time=n*2000,520,11
+                    elif(fro=="NASHIK" and to=="SATARA"):
+                        fare,dist,time=n*900,330,7.3
+                    elif(fro=="SOLAPUR" and to=="THANE"):
+                        fare,dist,time=n*1600,405,9
+                    elif(fro=="SOLHAPUR" and to=="KOLHAPUR"):
+                        fare,dist,time=n*600,230,6
+                    elif(fro=="SOLAPUR" and to=="PUNE"):
+                        fare,dist,time=n*600,230,5
+                    elif(fro=="SOLAPUR"and to=="NASHIK"):
+                        fare,dist,time=n*1800,420,9
+                    elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                        fare,dist,time=n*1000,360,9
+                    elif(fro=="SOLAPUR" and to=="SATARA"):
+                        fare,dist,time=n*800,260,6
+                    elif(fro=="RATNAGIRI" and to=="THANE"):
+                        fare,dist,time=n*1800,450,10
+                    elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                        fare,dist,time=n*300,135,3.3
+                    elif(fro=="RATNAGIRI" and to=="PUNE"):
+                        fare,dist,time=n*800,310,6.1
+                    elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                        fare,dist,time=n*2000,520,11
+                    elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                        fare,dist,time=n*1000,360,9
+                    elif(fro=="RATNAGIRI" and to=="SATARA"):
+                        fare,dist,time=n*800,200,4.2
+                    elif(fro=="SATARA" and to=="THANE"):
+                        fare,dist,time=n*950,260,6
+                    elif(fro=="SATARA" and to=="KOLHAPUR"):
+                        fare,dist,time=n*300,130,2
+                    elif(fro=="SATARA" and to=="PUNE"):
+                        fare,dist,time=n*300,120,2.2
+                    elif(fro=="SATARA" and to=="NASHIK"):
+                        fare,dist,time=n*900,330,7.3
+                    elif(fro=="SATARA" and to=="SOLHAPUR"):
+                        fare,dist,time=n*800,260,6
+                    elif(fro=="SATARA" and to=="RATNAGIRI"):
+                        fare,dist,time=n*800,200,4.2
+                    else:
+                        print("*********** ERRORR *********")
+                else:
+                   print("****ERROR!YOU HAVE ENTERED INVALID CATEGORY *****")
+            elif(ty=="SLEEPER"): #type 2
+                if(cate=="AC"): #category ac
+                    if(berth=="UPPER"): #berth upper
+                        if(fro =="THANE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*1500,380,8
+                        elif(fro=="THANE" and to=="PUNE"):
+                            fare,dist,time=n*760,150,3.3
+                        elif(fro=="THANE" and to=="NASHIK"):
+                            fare,dist,time=n*1000,145,3
+                        elif(fro=="THANE" and to=="SOLAPUR"):
+                            fare,dist,time=n*1900,405,9
+                        elif(fro=="THANE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2100,450,10
+                        elif(fro=="THANE" and to=="SATARA"):
+                            fare,dist,time=n*1250,260,6
+                        elif(fro=="KOLHAPUR" and to=="THANE"):
+                            fare,dist,time=n*1500,380,8
+                        elif(fro=="KOLHAPUR" and to=="PUNE"):
+                            fare,dist,time=n*600,230,4.2
+                        elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2100,450,9
+                        elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                            fare,dist,time=n*600,230,6
+                        elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*600,135,3.3
+                        elif(fro=="KOLHAPUR" and to=="SATARA"):
+                            fare,dist,time=n*600,130,2
+                        elif(fro=="PUNE" and to=="THANE"):
+                            fare,dist,time=n*1060,150,3.3
+                        elif(fro=="PUNE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*900,230,4.2
+                        elif(fro=="PUNE" and to=="NASHIK"):
+                            fare,dist,time=n*850,210,4.3
+                        elif(fro=="PUNE" and to=="SOLAPUR"):
+                            fare,dist,time=n*900,230,5
+                        elif(fro=="PUNE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1100,310,6.1
+                        elif(fro=="PUNE" and to=="SATARA"):
+                            fare,dist,time=n*600,120,2.2
+                        elif(fro=="NASHIK" and to=="THANE"):
+                            fare,dist,time=n*1900,405,9
+                        elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                            fare,dist,time=n*2100,450,9
+                        elif(fro=="NASHIK" and to=="PUNE"):
+                            fare,dist,time=n*850,210,4.3
+                        elif(fro=="NASHIK" and to=="SOLAPUR"):
+                            fare,dist,time=n*2100,420,9
+                        elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2300,520,11
+                        elif(fro=="NASHIK" and to=="SATARA"):
+                            fare,dist,time=n*1200,330,7.3
+                        elif(fro=="SOLAPUR" and to=="THANE"):
+                            fare,dist,time=n*1900,405,9
+                        elif(fro=="SOLAPUR" and to=="KOLHAPUR"):
+                            fare,dist,time=n*900,230,6
+                        elif(fro=="SOLAPUR" and to=="PUNE"):
+                            fare,dist,time=n*900,230,5
+                        elif(fro=="SOLAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2100,420,9
+                        elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1300,360,9
+                        elif(fro=="SOLAPUR" and to=="SATARA"):
+                            fare,dist,time=n*1100,260,6
+                        elif(fro=="RATNAGIRI" and to=="THANE"):
+                            fare,dist,time=n*2100,450,10
+                        elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                            fare,dist,time=n*600,135,3.3
+                        elif(fro=="RATNAGIRI" and to=="PUNE"):
+                            fare,dist,time=n*1100,310,6.1
+                        elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                            fare,dist,time=n*2300,520,11
+                        elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                            fare,dist,time=n*1300,360,9
+                        elif(fro=="RATNAGIRI" and to=="SATARA"):
+                            fare,dist,time=n*1100,200,4.2
+                        elif(fro=="SATARA" and to=="THANE"):
+                            fare,dist,time=n*1250,260,6
+                        elif(fro=="SATARA" and to=="KOLHAPUR"):
+                            fare,dist,time=n*600,130,2
+                        elif(fro=="SATARA" and to=="PUNE"):
+                            fare,dist,time=n*600,120,2.2
+                        elif(fro=="SATARA" and to=="NASHIK"):
+                            fare,dist,time=n*1200,330,7.3
+                        elif(fro=="SATARA" and to=="SOLAPUR"):
+                            fare,dist,time=n*1100,260,6
+                        elif(fro=="SATARA" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1100,200,4.2
+                        else:
+                            print("*********** ERRORR *********")
+                    elif(berth=="LOWER"):#berth lower
+                        if(fro =="THANE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*1400,380,8
+                        elif(fro=="THANE" and to=="PUNE"):
+                            fare,dist,time=n*960,150,3.3
+                        elif(fro=="THANE" and to=="NASHIK"):
+                            fare,dist,time=n*900,145,3
+                        elif(fro=="THANE" and to=="SOLAPUR"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="THANE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2000,450,10
+                        elif(fro=="THANE" and to=="SATARA"):
+                            fare,dist,time=n*1150,260,6
+                        elif(fro=="KOLHAPUR" and to=="THANE"):
+                            fare,dist,time=n*1400,380,8
+                        elif(fro=="KOLHAPUR" and to=="PUNE"):
+                            fare,dist,time=n*800,230,4.2
+                        elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2000,450,9
+                        elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                            fare,dist,time=n*800,230,6
+                        elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*500,135,3.3
+                        elif(fro=="KOLHAPUR" and to=="SATARA"):
+                            fare,dist,time=n*500,130,2
+                        elif(fro=="PUNE" and to=="THANE"):
+                            fare,dist,time=n*960,150,3.3
+                        elif(fro=="PUNE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*800,230,4.2
+                        elif(fro=="PUNE" and to=="NASHIK"):
+                            fare,dist,time=n*750,210,4.3
+                        elif(fro=="PUNE" and to=="SOLAPUR"):
+                            fare,dist,time=n*800,230,5
+                        elif(fro=="PUNE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1000,310,6.1
+                        elif(fro=="PUNE" and to=="SATARA"):
+                            fare,dist,time=n*500,120,2.2
+                        elif(fro=="NASHIK" and to=="THANE"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                            fare,dist,time=n*2000,450,9
+                        elif(fro=="NASHIK" and to=="PUNE"):
+                            fare,dist,time=n*750,210,4.3
+                        elif(fro=="NASHIK" and to=="SOLAPUR"):
+                            fare,dist,time=n*2000,420,9
+                        elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2200,520,11
+                        elif(fro=="NASHIK" and to=="SATARA"):
+                            fare,dist,time=n*1100,330,7.3
+                        elif(fro=="SOLAPUR" and to=="THANE"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="SOLAPUR" and to=="KOLHAPUR"):
+                            fare,dist,time=n*800,230,6
+                        elif(fro=="SOLAPUR" and to=="PUNE"):
+                            fare,dist,time=n*800,230,5
+                        elif(fro=="SOLAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2000,420,9
+                        elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1200,360,9
+                        elif(fro=="SOLAPUR" and to=="SATARA"):
+                            fare,dist,time=n*1000,260,6
+                        elif(fro=="RATNAGIRI" and to=="THANE"):
+                            fare,dist,time=n*2000,450,10
+                        elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                            fare,dist,time=n*500,135,3.3
+                        elif(fro=="RATNAGIRI" and to=="PUNE"):
+                            fare,dist,time=n*1000,310,6.1
+                        elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                            fare,dist,time=n*2200,520,11
+                        elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                            fare,dist,time=n*1200,360,9
+                        elif(fro=="RATNAGIRI" and to=="SATARA"):
+                            fare,dist,time=n*1000,200,4.2
+                        elif(fro=="SATARA" and to=="THANE"):
+                            fare,dist,time=n*1150,260,6
+                        elif(fro=="SATARA" and to=="KOLHAPUR"):
+                            fare,dist,time=n*500,130,2
+                        elif(fro=="SATARA" and to=="PUNE"):
+                            fare,dist,time=n*500,120,2.2
+                        elif(fro=="SATARA" and to=="NASHIK"):
+                            fare,dist,time=n*1100,330,7.3
+                        elif(fro=="SATARA" and to=="SOLAPUR"):
+                            fare,dist,time=n*1000,260,6
+                        elif(fro=="SATARA" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1000,200,4.2
+                        else:
+                            print("*********** ERRORR *********")
+                    else:
+                        print("WRONG CATEGORY")
+                elif(cate=="NON-AC"): #category non-ac
+                    if(berth=="UPPER"): #berth upper
+                        if(fro =="THANE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*1400,380,8
+                        elif(fro=="THANE" and to=="PUNE"):
+                            fare,dist,time=n*660,150,3.3
+                        elif(fro=="THANE" and to=="NASHIK"):
+                            fare,dist,time=n*900,145,3
+                        elif(fro=="THANE" and to=="SOLAPUR"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="THANE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2000,450
+                        elif(fro=="THANE" and to=="SATARA"):
+                            fare,dist,time=n*1150,260,6
+                        elif(fro=="KOLHAPUR" and to=="THANE"):
+                            fare,dist,time=n*1400,380,8
+                        elif(fro=="KOLHAPUR" and to=="PUNE"):
+                            fare,dist,time=n*500,230,4.2
+                        elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2000,450,9
+                        elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                            fare,dist,time=n*500,230,6
+                        elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*500,135,3.3
+                        elif(fro=="KOLHAPUR" and to=="SATARA"):
+                            fare,dist,time=n*500,130,2
+                        elif(fro=="PUNE" and to=="THANE"):
+                            fare,dist,time=n*960,150,3.3
+                        elif(fro=="PUNE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*800,230,4.2
+                        elif(fro=="PUNE" and to=="NASHIK"):
+                            fare,dist,time=n*750,210,4.3
+                        elif(fro=="PUNE" and to=="SOLAPUR"):
+                            fare,dist,time=n*800,230,5
+                        elif(fro=="PUNE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1000,310,6.1
+                        elif(fro=="PUNE" and to=="SATARA"):
+                            fare,dist,time=n*500,120,2.2
+                        elif(fro=="NASHIK" and to=="THANE"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                            fare,dist,time=n*2000,450,9
+                        elif(fro=="NASHIK" and to=="PUNE"):
+                            fare,dist,time=n*750,210,4.3
+                        elif(fro=="NASHIK" and to=="SOLAPUR"):
+                            fare,dist,time=n*2000,420,9
+                        elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2200,520,11
+                        elif(fro=="NASHIK" and to=="SATARA"):
+                            fare,dist,time=n*1100,330,7.3
+                        elif(fro=="SOLAPUR" and to=="THANE"):
+                            fare,dist,time=n*1800,405,9
+                        elif(fro=="SOLAPUR" and to=="KOLHAPUR"):
+                            fare,dist,time=n*800,230,6
+                        elif(fro=="SOLAPUR" and to=="PUNE"):
+                            fare,dist,time=n*800,230,5
+                        elif(fro=="SOLAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*2000,420,9
+                        elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1200,360,9
+                        elif(fro=="SOLAPUR" and to=="SATARA"):
+                            fare,dist,time=n*1000,260,6
+                        elif(fro=="RATNAGIRI" and to=="THANE"):
+                            fare,dist,time=n*2000,450,10
+                        elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                            fare,dist,time=n*500,135,3.3
+                        elif(fro=="RATNAGIRI" and to=="PUNE"):
+                            fare,dist,time=n*1000,310,6.1
+                        elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                            fare,dist,time=n*2200,520,11
+                        elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                            fare,dist,time=n*1200,360,9
+                        elif(fro=="RATNAGIRI" and to=="SATARA"):
+                            fare,dist,time=n*1000,200,4.2
+                        elif(fro=="SATARA" and to=="THANE"):
+                            fare,dist,time=n*1150,260,6
+                        elif(fro=="SATARA" and to=="KOLHAPUR"):
+                            fare,dist,time=n*500,130,2
+                        elif(fro=="SATARA" and to=="PUNE"):
+                            fare,dist,time=n*500,120,2.2
+                        elif(fro=="SATARA" and to=="NASHIK"):
+                            fare,dist,time=n*1100,330,7.3
+                        elif(fro=="SATARA" and to=="SOLAPUR"):
+                            fare,dist,time=n*1000,260,6
+                        elif(fro=="SATARA" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1000,200,4.2
+                        else:
+                            print("*********** ERRORR *********")
+                    elif(berth=="LOWER"): #berth lower
+                        if(fro =="THANE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*1300,380,8
+                        elif(fro=="THANE" and to=="PUNE"):
+                            fare,dist,time=n*860,150,3.3
+                        elif(fro=="THANE" and to=="NASHIK"):
+                            fare,dist,time=n*800,145,3
+                        elif(fro=="THANE" and to=="SOLAPUR"):
+                            fare,dist,time=n*1700,405,9
+                        elif(fro=="THANE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1900,450,10
+                        elif(fro=="THANE" and to=="SATARA"):
+                            fare,dist,time=n*1050,260,6
+                        elif(fro=="KOLHAPUR" and to=="THANE"):
+                            fare,dist,time=n*1300,380,8
+                        elif(fro=="KOLHAPUR" and to=="PUNE"):
+                            fare,dist,time=n*700,230,4.2
+                        elif(fro=="KOLHAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*1900,450,9
+                        elif(fro=="KOLHAPUR" and to=="SOLAPUR"):
+                            fare,dist,time=n*700,230,6
+                        elif(fro=="KOLHAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*400,135,3.3
+                        elif(fro=="KOLHAPUR" and to=="SATARA"):
+                            fare,dist,time=n*400,130,2
+                        elif(fro=="PUNE" and to=="THANE"):
+                            fare,dist,time=n*860,150,3.3
+                        elif(fro=="PUNE" and to=="KOLHAPUR"):
+                            fare,dist,time=n*700,230,4.2
+                        elif(fro=="PUNE" and to=="NASHIK"):
+                            fare,dist,time=n*650,210,4.3
+                        elif(fro=="PUNE" and to=="SOLAPUR"):
+                            fare,dist,time=n*700,230,5
+                        elif(fro=="PUNE" and to=="RATNAGIRI"):
+                            fare,dist,time=n*900,310,6.1
+                        elif(fro=="PUNE" and to=="SATARA"):
+                            fare,dist,time=n*400,120,2.2
+                        elif(fro=="NASHIK" and to=="THANE"):
+                            fare,dist,time=n*1700,405,9
+                        elif(fro=="NASHIK" and to=="KOLHAPUR"):
+                            fare,dist,time=n*1900,450,9
+                        elif(fro=="NASHIK" and to=="PUNE"):
+                            fare,dist,time=n*650,210,4.3
+                        elif(fro=="NASHIK" and to=="SOLAPUR"):
+                            fare,dist,time=n*1900,420,9
+                        elif(fro=="NASHIK" and to=="RATNAGIRI"):
+                            fare,dist,time=n*2100,520,11
+                        elif(fro=="NASHIK" and to=="SATARA"):
+                            fare,dist,time=n*1000,330,7.3
+                        elif(fro=="SOLAPUR" and to=="THANE"):
+                            fare,dist,time=n*1700,405,9
+                        elif(fro=="SOLAPUR" and to=="KOLHAPUR"):
+                            fare,dist,time=n*700,230,6
+                        elif(fro=="SOLAPUR" and to=="PUNE"):
+                            fare,dist,time=n*700,230,5
+                        elif(fro=="SOLAPUR"and to=="NASHIK"):
+                            fare,dist,time=n*1900,420,9
+                        elif(fro=="SOLAPUR" and to=="RATNAGIRI"):
+                            fare,dist,time=n*1100,360,9
+                        elif(fro=="SOLAPUR" and to=="SATARA"):
+                            fare,dist,time=n*900,260,6
+                        elif(fro=="RATNAGIRI" and to=="THANE"):
+                            fare,dist,time=n*1900,450,10
+                        elif(fro=="RATNAGIRI" and to=="KOLHAPUR"):
+                            fare,dist,time=n*400,135,3.3
+                        elif(fro=="RATNAGIRI" and to=="PUNE"):
+                            fare,dist,time=n*900,310,6.1
+                        elif(fro=="RATNAGIRI" and to=="NASHIK"):
+                            fare,dist,time=n*2100,520,11
+                        elif(fro=="RATNAGIRI" and to=="SOLAPUR"):
+                            fare,dist,time=n*1100,360,9
+                        elif(fro=="RATNAGIRI" and to=="SATARA"):
+                            fare,dist,time=n*900,200,4.2
+                        elif(fro=="SATARA" and to =="THANE"):
+                            fare,dist,time=n*1150,260,6
+                        elif(fro=="SATARA" and to=="KOLHAPUR"):
+                            fare,dist,time=n*400,130,2
+                        elif(fro=="SATARA" and to=="PUNE"):
+                            fare,dist,time=n*400,120,2.2
+                        elif(fro=="SATARA" and to=="NASHIK"):
+                            fare,dist,time=n*1000,330,7.3
+                        elif(fro=="SATARA" and to=="SOLAPUR"):
+                            fare,dist,time=n*900,260,6
+                        elif(fro=="SATARA" and to=="RATNAGIRI"):
+                            fare,dist,time=n*900,200,4.2
+                        else:
+                            print("******ERROR! WRONG BERTH TYPE*******")
+                    else:
+                        print("WRONG CATEGORY")        
+            else:
+                print("***ERROR! WRONG CATEGORY ***")   #IF INVALID TYPE IS CHOOSED
+        if(pay=="ONLINE"):
+            ofare=fare-(0.1*fare) 
+            tfare=travi_pay+ofare
+        elif(pay=="CASH"):
+            tfare=travi_pay+fare
+        else:
+            temp=2
+        if(pflag==1):
+            print("\n\n===================================  TICKET  ===========================================")
+            print("********************** WELCOME TO M.A.A.N.S TRAVELS ****************************""\nDATE OF BOOKING:",d," \tTIME OF BOOKING:",t.strftime("%T")," TICKET NO.:",(random.randint(1,999999999999999)))
+            print("\n\n\nDATE OF TRAVELLING:",day,"/",month,"/",year, "\t\tTIME OF DEPARTURE",time1,"\nNUMBER OF PEOPLE TRAVEELLING:",n)
+            if(n==1):
+                print("NAME OF PASSENGER:",name,"\nGENDER:",gender,"\nAGE:",age)
+                if(ty=="SLEEPER"):
+                    print("SEAT NUMBER:",random.randint(0,30))
+                elif(ty=="SEATER"):
+                    print("SEAT NUMBER:",random.randint(0,45))
+                else:
+                    print("AN ERROR OCCURED")
+            elif(n>=1 and n==2):
+                print("NAME OF PASSENGER:",name,"\nGENDER:",gender,"\nAGE:",age,"\nNAME OF PASSENGER 2:",name1,"\nGENDER:",gender1,"\nAGE:",age1)
+                if(ty=="SLEEPER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,30))
+                elif(ty=="SEATER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,45))
+                else:
+                    print("AN ERROR OCCURED")
+            elif(n>=2 and n==3):
+                print("NAME OF PASSENGER:",name,"\nGENDER:",gender,"\nAGE:",age,"\nNAME OF PASSENGER 2:",name1,"\nGENDER:",gender1,"\nAGE:",age1,"\nNAME OF PASSENGER 3:",name2,"\nGENDER:",gender2,"\nAGE:",age2)
+                if(ty=="SLEEPER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 3:",random.randint(0,30))
+                elif(ty=="SEATER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 3:",random.randint(0,45))
+                else:
+                    print("AN ERROR OCCURED")
+            elif(n>=3 and n==4):
+                print("NAME OF PASSENGER:",name,"\nGENDER:",gender,"\nAGE:",age,"\nNAME OF PASSENGER 2:",name1,"\nGENDER:",gender1,"\nAGE:",age1,"\nNAME OF PASSENGER 3:",name2,"\nGENDER:",gender2,"\nAGE:",age2,"\nNAME OF PASSENGER 4:",name3,"\nGENDER:",gender3,"\nAGE:",age3)
+                if(ty=="SLEEPER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 3:",random.randint(0,30))
+                    print("SEAT NUMBER FOR PASSENGER 4:",random.randint(0,30))
+                elif(ty=="SEATER"):
+                    print("SEAT NUMBER FOR PASSENGER 1:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 2:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 3:",random.randint(0,45))
+                    print("SEAT NUMBER FOR PASSENGER 4:",random.randint(0,45))
+                else:
+                    print("AN ERROR OCCURED")
+            else:
+                print("SORRY!THE PROGRAM IS CURRENTLY DEVELOPED FOR BOOKING TICKETS")
+            print("STARTING POINT :",fro,"\t\t\t\tDESTINATION:",to,"\nBOARDING POINT:",bp,"\t\t\tDROPPING POINT:",dp,"\nCATEGORY :",cate,"\nTYPE:",ty)
+            if(ty=="SLEEPER"):
+                print("BERTH:",berth)
+            print("TOTAL TIME OF JOURNEY:",time,"hours" "\nTOTAL DISTANCE IN KILOMETERS:",dist,"km" "\nMODE OF PAYMENT:",pay,"\nM.A.A.N.S ASSURANCE:₹",travi_pay,"\nTOTAL FARE:₹",tfare)
+            print("""**NOTE THE HALT TIME: 25 MINS** \nCUSTOMER HELPLINE NUMBER(TOLLFREE): +91 1201345678/79 \nLIVE TRACK: www.maan travels/live_track.com or m.a.a.n.s travels app \nFOR MORE DETAILS: www.maan travels.com or m.a.a.n.s travels app \n******************* HAVE A SAFE & HAPPY JOURNEY ********************************* \n =================================== VISIT AGAIN ==========================================""")
+            pd=int(input("\n\n\nPRESS 1. TO DOWNLOAD TICKET \t\t 2. TO PRINT TICKET""\nENTER YOUR CHOICE:"))
+            if(pd==1):
+                print("_________________________________________________TICKET HAS BEEN SUCCESFULLY DWONLOADED IN DOWNLOADS FOLDER_________________________________________________")
+            elif(pd==2):
+                print("_________________________________________________TICKET HAS BEEN SUCCESFULLY PRINTED_________________________________________________")
+            elif(pd>2):
+                pd=int(input("PRESS 1. TO DOWNLOAD TICKET \t\t 2. TO PRINT TICKET""\nENTER YOUR CHOICE:"))
+                if(pd==1):
+                    print("_________________________________________________TICKET HAS BEEN SUCCESFULLY DWONLOADED IN DOWNLOADS FOLDER_________________________________________________")
+                elif(pd==2):
+                    print("_________________________________________________TICKET HAS BEEN SUCCESFULLY PRINTED_________________________________________________")
+                else:
+                    temp=2
+            else:
+                temp=2
+        else:
+            temp=2
+        print("\n\nRATE M.A.A.N.S PROGRAM OUT OF 5")
+        rate=int(input("ENTER(IN DIGIT):"))
+        if(rate==1 or rate ==2 or rate==3):
+            print( "PLEASE GIVE US SUGGESTION TO IMPROVE:")
+            sol=input("ENTER YOUR SUGGESTIONS:" )
+            print("****THANKS! FOR YOUR FEEDBACK****""\n------------------------------------END--------------------------------------------------------")
+        elif(rate==4 or rate==5):
+            print("THANKS! FOR YOUR FEEDBACK" "\n------------------------------------END----------------------------------------------------")
+        else:
+            print("PLEASE RATE IT OUT OF 5 ONLY!!!!")
+            print("\n\nRATE M.A.A.N.S PROGRAM OUT OF 5")
+            rate=int(input("ENTER(IN DIGIT):"))
+            if(rate==1 or rate ==2 or rate==3):
+                print( "PLEASE GIVE US SUGGESTION TO IMPROVE:")
+                sol=input("ENTER YOUR SUGGESTIONS:" )
+                print("****THANKS! FOR YOUR FEEDBACK****""\n------------------------------------END--------------------------------------------------------")
+            elif(rate==4 or rate==5):
+                print("THANKS! FOR YOUR FEEDBACK" "\n------------------------------------END----------------------------------------------------")
+    elif(temp==0):
+        print("********************ERROR!! WRONG INPUT PLEASE TRY AGAIN********************")
+    else:
+        print("********************ERROR!! WRONG INPUT PLEASE TRY AGAIN********************")
+else:
+    print("ERROR! ENTER VALID OPTIONS PLEASE")
+
+
+
